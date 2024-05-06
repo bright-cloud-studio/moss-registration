@@ -30,7 +30,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['address_2'] = array
 
 
 
-$GLOBALS['TL_DCA']['tl_member']['fields']['address_2'] = array
+$GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
 (
     'exclude'                 => true,
     'search'                  => true,
