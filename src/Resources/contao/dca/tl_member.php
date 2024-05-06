@@ -11,6 +11,6 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['price_tier'] = array
     'inputType'               => 'text',
     'default'                 => '',
     'search'                  => true,
-    'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50'),
+    'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50', 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
