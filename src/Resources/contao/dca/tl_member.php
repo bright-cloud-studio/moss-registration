@@ -7,10 +7,11 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
 
 $GLOBALS['TL_DCA']['tl_member']['fields']['price_tier'] = array
 (
-    'sql'                     => "varchar(255) NOT NULL default ''",
-    'inputType'               => 'text',
-    'default'                 => '',
+    'exclude'                 => true,
     'search'                  => true,
-    'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50', 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
