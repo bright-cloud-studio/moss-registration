@@ -37,7 +37,14 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
     'inputType'                => 'checkbox',
-    'options'                  => array('test_1' => 'Test 1', 'test_2' => 'Test 2'),
+    'options_callback'  => function ()
+        {
+            return [
+                'option_1' => 'Option One',
+                'option_2' => 'Option Two',
+                'option_3' => 'Option Three',
+            ];
+        },
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
