@@ -40,9 +40,20 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
     'options_callback'  => function ()
         {
             return [
-                'option_1' => 'Option One',
-                'option_2' => 'Option Two',
-                'option_3' => 'Option Three',
+                'dr_of_chiropractic' => 'Doctor of Chiropractic',
+                'licensed_acupuncturist' => 'Licensed Acupuncturist',
+                'medical_doctor' => 'Medical Doctor',
+                'masters_in_nutrition_field' => 'Master’s Degree in Nutrition-Related Field',
+                'certified_nutritionist' => 'Certified Nutritionist',
+                'dr_of_vet_medicine' => 'Doctor of Veterinary Medicine',
+                'registered_dietitian' => 'Registered Dietitian',
+                'cert_clinical_nutritionist' => 'Certified Clinical Nutritionist',
+                'student' => 'Student',
+                'licensed_dietitian' => 'Licensed Dietitian / Nutritionist',
+                'dr_of_osteopathy' => 'Doctor of Osteopathy',
+                'dr_of_philosophy' => 'Doctor of Philosophy in Nutrition-Related Field',
+                'dr_of_naturopathy' => 'Doctor of Naturopathy',
+                'other' => 'Other',
             ];
         },
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
