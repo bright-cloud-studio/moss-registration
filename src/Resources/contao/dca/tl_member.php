@@ -5,6 +5,7 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
     $GLOBALS['TL_DCA']['tl_member']['palettes'][$k] = str_replace('groups;', 'groups;{price_tier_legend},price_tier;', $v);
 }
 
+// Text Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['address_1'] = array
 (
     'exclude'                 => true,
@@ -28,15 +29,59 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['address_2'] = array
 
 
 
+// Textarea Fields
+$GLOBALS['TL_DCA']['tl_member']['fields']['specialties_or_interest'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'textarea',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
+$GLOBALS['TL_DCA']['tl_member']['fields']['how_hear_about_moss'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'textarea',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
+$GLOBALS['TL_DCA']['tl_member']['fields']['besst_time_for_call'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'textarea',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
+$GLOBALS['TL_DCA']['tl_member']['fields']['further_comments'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'textarea',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
 
 
+
+
+// Checkbox Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
 (
     'exclude'                 => true,
     'search'                  => true,
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'                => 'checkbox',
+    'inputType'               => 'checkbox',
     'options_callback'  => function ()
         {
             return [
@@ -54,6 +99,48 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
                 'dr_of_philosophy' => 'Doctor of Philosophy in Nutrition-Related Field',
                 'dr_of_naturopathy' => 'Doctor of Naturopathy',
                 'other' => 'Other',
+            ];
+        },
+    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                      => "varchar(32) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_member']['fields']['documents_how_to_provide'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'checkbox',
+    'options_callback'  => function ()
+        {
+            return [
+                'dr_of_chiropractic' => 'Upload verification now',
+                'licensed_acupuncturist' => 'I will email it to professionals@mossnutrition.com',
+                'medical_doctor' => 'I will mail it to Moss Nutrition, 380 Russell Street, Suite 114, Hadley MA 01035 USA',
+                'medical_doctor' => 'I will FAX it to 800-626-0108 (413-587-0331 local/international)',
+            ];
+        },
+    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                      => "varchar(32) NOT NULL default ''"
+);
+
+// Radio Fields
+$GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'checkbox',
+    'options_callback'  => function ()
+        {
+            return [
+                'resale' => 'Resale - Purchase products for my patients',
+                'personal' => 'Personal - Purchase products for myself',
+                'education' => 'Education - Access Moss Nutrition educational materials',
+                'relationships' => 'Relationships - Access to clinical & technical support/consults with Dr. Moss and team',
+                'patient_orders' => 'Patient Orders - Enable my patients to order from Moss Nutrition directly',
             ];
         },
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
