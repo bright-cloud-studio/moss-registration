@@ -50,7 +50,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['how_hear_about_moss'] = array
     'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
-$GLOBALS['TL_DCA']['tl_member']['fields']['besst_time_for_call'] = array
+$GLOBALS['TL_DCA']['tl_member']['fields']['best_time_to_call'] = array
 (
     'exclude'                 => true,
     'search'                  => true,
