@@ -19,7 +19,8 @@
     },
     "require":{
         "php": "^8.1",
-        "contao/core-bundle": "^4.13"
+        "contao/core-bundle": "^4.13",
+        "terminal42/contao-fineuploader": "^3.4"
     },
     "extra":{
         "contao-manager-plugin": "Bcs\\MossRegistrationBundle\\ContaoManager\\Plugin"
