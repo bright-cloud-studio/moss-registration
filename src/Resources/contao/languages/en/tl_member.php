@@ -27,4 +27,4 @@ $GLOBALS['TL_LANG']['tl_member']['terms_of_use'] = array('Terms of Use', 'This i
 $GLOBALS['TL_LANG']['tl_member']['verification_of_licensure'] = array('Verification of your licensure, certification, professional degree or relevant student status is required. Please indicate how you will provide this documentation (choose one)', 'This is a test field');
 
 // Upload Fields
-$GLOBALS['TL_LANG']['tl_member']['upload_file'] = array('Upload your licence, certification, degree or student status', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['upload_files'] = array('Upload your licence, certification, degree or student status', 'This is a test field');
