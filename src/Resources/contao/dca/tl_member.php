@@ -177,6 +177,6 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['upload_file'] = array
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
     'inputType'               => 'fineUploader',
-    'eval'                    => array('uploadFolder'=>'files/content/uploads', 'mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                    => array('uploadFolder'=>'files/content/uploads', 'directUpload'=>true, 'multiple'=>true, 'storeFile'=>true, 'mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
