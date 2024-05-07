@@ -125,7 +125,28 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['documents_how_to_provide'] = array
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 
+
+
 // Radio Fields
+$GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'checkbox',
+    'options_callback'  => function ()
+        {
+            return [
+                'upload' => 'Upload verification now',
+                'email' => 'I will email it to professionals@mossnutrition.com',
+                'snail_mail' => 'I will mail it to Moss Nutrition, 380 Russell Street, Suite 114, Hadley MA 01035 USA',
+                'fax' => 'I will FAX it to 800-626-0108 (413-587-0331 local/international)',
+            ];
+        },
+    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                      => "varchar(32) NOT NULL default ''"
+);
 $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
 (
     'exclude'                 => true,
