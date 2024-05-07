@@ -173,7 +173,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['upload_documents'] = array
     'search'                  => true,
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'text',
+    'inputType'               => 'upload',
     'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
