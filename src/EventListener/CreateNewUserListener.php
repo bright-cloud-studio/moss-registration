@@ -15,9 +15,10 @@ class CreateNewUserListener
      */
     public function __invoke(int $userId, array $userData, Module $module): void
     {
-
+        print_r($this);
+        die();
         echo "HIT";
-      die();
+          die();
         // Create avatar
         //$objMember = MemberModel::findById($userId);
         //Member::processAvatar($objMember, $userData);
