@@ -9,4 +9,4 @@
 */
 
 /* Hooks */
-$GLOBALS['TL_HOOKS']['generatePage'][] 		 = array('Bcs\EventListener', 'onCreateNewUser');
+$GLOBALS['TL_HOOKS']['createNewUser'][] 		 = array('Bcs\EventListener', 'onCreateNewUser');
