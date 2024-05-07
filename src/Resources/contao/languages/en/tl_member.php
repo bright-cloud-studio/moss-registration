@@ -18,7 +18,7 @@ $GLOBALS['TL_LANG']['tl_member']['besst_time_for_call']         = array('The bes
 $GLOBALS['TL_LANG']['tl_member']['further_comments']         = array('Please add further comments here', 'This is a test field');
 
 // Checkbox Fields
-$GLOBALS['TL_LANG']['tl_member']['type_of_practitioner'] = array('Type of Practitioner', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['type_of_practitioner'] = array('Type of Practitioner (choose all that apply)', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['documents_how_to_provide'] = array('Type of Practitioner', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['reason_for_wanting_account'] = array('What is your primary reason for wanting a Practitioner Account? Choose one', 'This is a test field');
 
