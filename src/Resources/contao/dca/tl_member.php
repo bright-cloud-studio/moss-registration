@@ -175,7 +175,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['upload_documents'] = [
         'uploadFolder'      => 'files/practitioners',
         'useHomeDir'        => true,
         'doNotOverwrite'    => true,  
-        'uploadButtonTitle' => 'Fire It Up',
+        'uploadButtonTitle' => 'Fire It Up'
     ],
     'sql' => "blob NULL"
 ];
