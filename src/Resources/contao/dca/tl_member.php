@@ -105,28 +105,6 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_member']['fields']['documents_how_to_provide'] = array
-(
-    'exclude'                 => true,
-    'search'                  => true,
-    'sorting'                 => true,
-    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'checkbox',
-    'options_callback'  => function ()
-        {
-            return [
-                'dr_of_chiropractic' => 'Upload verification now',
-                'licensed_acupuncturist' => 'I will email it to professionals@mossnutrition.com',
-                'medical_doctor' => 'I will mail it to Moss Nutrition, 380 Russell Street, Suite 114, Hadley MA 01035 USA',
-                'medical_doctor' => 'I will FAX it to 800-626-0108 (413-587-0331 local/international)',
-            ];
-        },
-    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-    'sql'                      => "varchar(32) NOT NULL default ''"
-);
-
-
-
 // Radio Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
 (
