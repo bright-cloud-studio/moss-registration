@@ -166,11 +166,8 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
 );
 
 
-
-
-
 // Upload Fields
-$GLOBALS['TL_DCA']['tl_member']['fields']['upload_file'] = array
+$GLOBALS['TL_DCA']['tl_member']['fields']['upload_files'] = array
 (
     'exclude'                 => true,
     'search'                  => true,
