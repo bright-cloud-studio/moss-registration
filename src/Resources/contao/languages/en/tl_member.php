@@ -14,7 +14,7 @@ $GLOBALS['TL_LANG']['tl_member']['address_2']         = array('Address 2', 'This
 // Textarea fields
 $GLOBALS['TL_LANG']['tl_member']['specialties_or_interest']         = array('Describe your specialties or field of interest as a health care practitioner', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['how_hear_about_moss']         = array('How did you hear about Moss Nutrition? (Please be specific. For example, if you heard about us from a friend or colleague, tell us their name. If you did a Google search, what were you looking for? If you heard of us at a class, conference or seminar, note the institution or event)', 'This is a test field');
-$GLOBALS['TL_LANG']['tl_member']['besst_time_for_call']         = array('The best time for us to telephone you during business hours', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['best_time_to_call']         = array('The best time for us to telephone you during business hours', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['further_comments']         = array('Please add further comments here', 'This is a test field');
 
 // Checkbox Fields
