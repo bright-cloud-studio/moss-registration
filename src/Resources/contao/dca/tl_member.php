@@ -165,14 +165,18 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 
-
-
-$GLOBALS['TL_DCA']['tl_member']['fields']['upload_documents'] = array
-(
-    'exclude'                 => true,
-    'search'                  => true,
-    'sorting'                 => true,
-    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'upload',
-    'eval'                    => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-);
+// Add fields to tl_user
+$GLOBALS['TL_DCA']['tl_member']['fields']['upload_documents'] = [
+    'exclude' => true,
+    'inputType' => 'fileTree',
+    'eval' => [
+        'feEditable' => true,
+        'feViewable' => true,
+        'feGroup' => 'personal',
+        'fieldType' => 'radio',
+        'filesOnly' => true,
+        'extensions' => implode(',', System::getContainer()->getParameter('contao.image.valid_extensions')),
+        'tl_class' => 'clr'
+    ],
+    'sql' => "binary(16) NULL"
+];
