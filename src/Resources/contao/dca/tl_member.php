@@ -168,17 +168,14 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
 // Add fields to tl_user
 $GLOBALS['TL_DCA']['tl_member']['fields']['upload_documents'] = [
     'exclude' => true,
-    'inputType' => 'fileTree',
+    'inputType' => 'fineUploader',
     'eval' => [
-        'feEditable' => true,
-        'feViewable' => true,
-        'feGroup' => 'personal',
-        'fieldType' => 'radio',
-        'filesOnly' => true,
-        'extensions' => implode(',', System::getContainer()->getParameter('contao.image.valid_extensions')),
-        'tl_class' => 'clr'
+        'multiple'          => true,
+        'storeFile'         => true,
+        'useHomeDir'        => true,
+        'uploadButtonTitle' => 'Fire It Up',
     ],
-    'sql' => "binary(16) NULL"
+    'sql' => "blob NULL"
 ];
 
 
