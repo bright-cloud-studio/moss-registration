@@ -104,6 +104,25 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
+$GLOBALS['TL_DCA']['tl_member']['fields']['terms_of_use'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'checkbox',
+    'options_callback'  => function ()
+        {
+            return [
+                'agree' => 'I agree to the Moss Nutrition <a class="testing">Terms of Use</a>',
+            ];
+        },
+    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                      => "varchar(32) NOT NULL default ''"
+);
+
+
+
 
 // Radio Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
@@ -144,4 +163,20 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
         },
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
+);
+
+
+
+
+
+// Upload Fields
+$GLOBALS['TL_DCA']['tl_member']['fields']['upload_file'] = array
+(
+    'exclude'                 => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+    'inputType'               => 'filetree',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
