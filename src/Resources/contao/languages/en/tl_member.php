@@ -21,6 +21,10 @@ $GLOBALS['TL_LANG']['tl_member']['further_comments']         = array('Please add
 $GLOBALS['TL_LANG']['tl_member']['type_of_practitioner'] = array('Type of Practitioner (choose all that apply)', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['documents_how_to_provide'] = array('Type of Practitioner', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['reason_for_wanting_account'] = array('What is your primary reason for wanting a Practitioner Account? Choose one', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['terms_of_use'] = array('Terms of Use', 'This is a test field');
 
 // Radio Fields
 $GLOBALS['TL_LANG']['tl_member']['verification_of_licensure'] = array('Verification of your licensure, certification, professional degree or relevant student status is required. Please indicate how you will provide this documentation (choose one)', 'This is a test field');
+
+// Upload Fields
+$GLOBALS['TL_LANG']['tl_member']['upload_filee'] = array('Upload your licence, certification, degree or student status', 'This is a test field');
