@@ -172,11 +172,19 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
 // Upload Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['upload_file'] = array
 (
-    'exclude'                 => true,
-    'search'                  => true,
-    'sorting'                 => true,
-    'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'fineUploader',
-    'eval'                    => array('uploadFolder'=>'files/content/uploads', 'directUpload'=>true, 'multiple'=>true, 'storeFile'=>true, 'mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-    'sql'                     => "varchar(255) NOT NULL default ''"
-);
+    'inputType' => 'fineUploader',
+    'eval' => [
+        'multiple' => false,
+        'storeFile' => true,
+        'uploadFolder' => 'files/content/uploads,
+        'uploaderLimit' => 1,
+        'addToDbafs' => false,
+        'doNotOverwrite' => true,
+        'extensions' => 'jpg,jpeg,png,svg',
+        'feEditable' => true,
+        'feViewable' => true,
+        'feGroup' => 'listing',
+        'tl_class' => 'clr',
+    ],
+    'sql' => "varchar(255) NOT NULL default ''",
+];
