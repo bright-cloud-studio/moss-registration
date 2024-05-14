@@ -111,7 +111,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
             ];
         },
     'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-    'sql'                      => "varchar(32) NOT NULL default ''"
+    'sql'                      => "varchar(255) NOT NULL default ''"
 );
 $GLOBALS['TL_DCA']['tl_member']['fields']['terms_of_use'] = array
 (
@@ -127,7 +127,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['terms_of_use'] = array
             ];
         },
     'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50', 'customTpl' => 'form_checkbox_terms'),
-    'sql'                      => "varchar(32) NOT NULL default ''"
+    'sql'                      => "varchar(255) NOT NULL default ''"
 );
 
 
@@ -151,7 +151,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
             ];
         },
     'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-    'sql'                      => "varchar(32) NOT NULL default ''"
+    'sql'                      => "varchar(255) NOT NULL default ''"
 );
 $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
 (
@@ -171,7 +171,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
             ];
         },
     'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-    'sql'                      => "varchar(32) NOT NULL default ''"
+    'sql'                      => "varchar(255) NOT NULL default ''"
 );
 
 // Add fields to tl_user
