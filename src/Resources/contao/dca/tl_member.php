@@ -8,7 +8,12 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
 // Convert existing fields to mandatory
 $GLOBALS['TL_DCA']['tl_member']['fields']['city'] = array
 (
-    'eval'                    => array('mandatory'=>true),
+    'filter'                  => true,
+    'search'                  => true,
+    'sorting'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
 // Text Fields
