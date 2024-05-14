@@ -5,6 +5,9 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
     $GLOBALS['TL_DCA']['tl_member']['palettes'][$k] = str_replace('groups;', 'groups;{price_tier_legend},price_tier;', $v);
 }
 
+// Convert existing fields to mandatory
+$GLOBALS['TL_DCA']['tl_member']['fields']['city']['eval'][] =  array('mandatory', true);
+
 // Text Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['address_1'] = array
 (
