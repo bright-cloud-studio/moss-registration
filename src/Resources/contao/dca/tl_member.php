@@ -131,7 +131,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
     'search'                  => true,
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'checkbox',
+    'inputType'               => 'radio',
     'options_callback'  => function ()
         {
             return [
@@ -150,7 +150,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
     'search'                  => true,
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-    'inputType'               => 'checkbox',
+    'inputType'               => 'radio',
     'options_callback'  => function ()
         {
             return [
