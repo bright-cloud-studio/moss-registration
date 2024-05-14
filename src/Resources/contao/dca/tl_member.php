@@ -6,7 +6,10 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
 }
 
 // Convert existing fields to mandatory
-$GLOBALS['TL_DCA']['tl_member']['fields']['city']['eval'] =  array('mandatory', true);
+$GLOBALS['TL_DCA']['tl_member']['fields']['city'] = array
+(
+    'eval'                    => array('mandatory'=>true),
+);
 
 // Text Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['address_1'] = array
