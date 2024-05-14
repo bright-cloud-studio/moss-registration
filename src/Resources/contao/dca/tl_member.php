@@ -126,7 +126,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['terms_of_use'] = array
                 'agree' => 'I agree to the Moss Nutrition <a class="terms_and_conditions">Terms of Use</a>',
             ];
         },
-    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50', 'customTpl' => 'form_checkbox_terms'),
+    'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50', 'customTpl' => 'form_checkbox_terms'),
     'sql'                      => "varchar(255) NOT NULL default ''"
 );
 
