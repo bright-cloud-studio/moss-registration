@@ -23,7 +23,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['address_2'] = array
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
     'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
