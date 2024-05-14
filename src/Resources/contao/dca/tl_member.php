@@ -15,6 +15,31 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['city'] = array
     'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
+$GLOBALS['TL_DCA']['tl_member']['fields']['state'] = array
+(
+    'sorting'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(64) NOT NULL default ''"
+);
+$GLOBALS['TL_DCA']['tl_member']['fields']['postal'] = array
+(
+    'search'                  => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>32, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(32) NOT NULL default ''"
+);
+$GLOBALS['TL_DCA']['tl_member']['fields']['phone'] = array
+(
+    'search'                  => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'rgxp'=>'phone', 'decodeEntities'=>true, 'feEditable'=>true, 'feGroup'=>'contact', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(64) NOT NULL default ''"
+);
+
+
+
+
 
 // Text Fields
 $GLOBALS['TL_DCA']['tl_member']['fields']['address_1'] = array
@@ -78,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['further_comments'] = array
     'sorting'                 => true,
     'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
     'inputType'               => 'textarea',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
@@ -112,7 +137,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['type_of_practitioner'] = array
                 'other' => 'Other',
             ];
         },
-    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 $GLOBALS['TL_DCA']['tl_member']['fields']['terms_of_use'] = array
@@ -152,7 +177,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['verification_of_licensure'] = array
                 'fax' => 'I will FAX it to 800-626-0108 (413-587-0331 local/international)',
             ];
         },
-    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
@@ -172,7 +197,7 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['reason_for_wanting_account'] = array
                 'patient_orders' => 'Patient Orders - Enable my patients to order from Moss Nutrition directly',
             ];
         },
-    'eval'                     => array('feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'eval'                     => array('mandatory'=>true, 'feEditable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                      => "varchar(32) NOT NULL default ''"
 );
 
