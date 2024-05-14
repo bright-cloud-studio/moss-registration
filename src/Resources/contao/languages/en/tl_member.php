@@ -7,8 +7,9 @@ $GLOBALS['TL_LANG']['tl_member']['price_tier_legend']         = array('Test Lege
 $GLOBALS['TL_LANG']['tl_member']['price_tier']         = array('Test Field', 'This is a test field');
 
 // Text Fields
-$GLOBALS['TL_LANG']['tl_member']['address_1']         = array('Address 1', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['address_1']         = array('Address', 'This is a test field');
 $GLOBALS['TL_LANG']['tl_member']['address_2']         = array('Address 2', 'This is a test field');
+$GLOBALS['TL_LANG']['tl_member']['postal']         = array('Zip or Postal Code', 'This is a test field');
 
 
 // Textarea fields
