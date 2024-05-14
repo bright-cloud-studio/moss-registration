@@ -5,31 +5,12 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
     $GLOBALS['TL_DCA']['tl_member']['palettes'][$k] = str_replace('groups;', 'groups;{price_tier_legend},price_tier;', $v);
 }
 
+
 // Convert existing fields to mandatory
 $GLOBALS['TL_DCA']['tl_member']['fields']['city']['eval']['mandatory'] = true;
-$GLOBALS['TL_DCA']['tl_member']['fields']['state'] = array
-(
-    'sorting'                 => true,
-    'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
-    'sql'                     => "varchar(64) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_member']['fields']['postal'] = array
-(
-    'search'                  => true,
-    'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>32, 'feEditable'=>true, 'feGroup'=>'address', 'tl_class'=>'w50'),
-    'sql'                     => "varchar(32) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_member']['fields']['phone'] = array
-(
-    'search'                  => true,
-    'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'rgxp'=>'phone', 'decodeEntities'=>true, 'feEditable'=>true, 'feGroup'=>'contact', 'tl_class'=>'w50'),
-    'sql'                     => "varchar(64) NOT NULL default ''"
-);
-
-
+$GLOBALS['TL_DCA']['tl_member']['fields']['state']['eval']['mandatory'] = true;
+$GLOBALS['TL_DCA']['tl_member']['fields']['postal']['eval']['mandatory'] = true;
+$GLOBALS['TL_DCA']['tl_member']['fields']['phone']['eval']['mandatory'] = true;
 
 
 
